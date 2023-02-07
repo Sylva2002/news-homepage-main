@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    /* Primary-color */
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+
+    /* Neutral color */
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+    --paragraph-font-size: 15px;
+}
+
+body{
+    font-family: Inter;
+    background-color: var(--Off-white);
+    
+}
+body.active{
+    overflow: hidden;
+}
+main{
+    padding-inline:  1rem;
+}
+body.active::after{
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background-color: var(--Very-dark-blue);
+}
+header{
+    padding-block: 2rem;
+}
+p{
+    font-size: var(--paragraph-font-size);
+    color: var(--Dark-grayish-blue);
+    line-height: 1.5rem;
+}
+.nav-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    position: fixed;
+    right: -75vw;
+    top: 0;
+    background-color: var(--Off-white);
+    height: 100vh;
+    width: 75vw;
+    padding: 1.5rem;
+    z-index: 1;
+    transition: 0.5s ease-in;
+}
+.nav.active{
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: var(--Off-white);
+    height: 100vh;
+    width: 75vw;
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+.nav ul{
+    list-style: none;
+    margin-top: 5rem;
+}
+.nav ul li{
+    margin-bottom: 1.5rem;
+}
+.nav a{
+    font-size: large;
+    text-decoration: none;
+    color: var(--Very-dark-blue);
+    font-weight: 400;
+    transition: 0.3s;
+}
+.nav a:hover{
+    color: var(--Soft-red);
+}
+.close-nav-mobile{
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-inline-start: auto;
+    cursor: pointer;
+}
+.open-nav-mobile{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.logo img{
+    width: 50px;
+}
+
+/* primary-news */
+.primary-news-content{
+    margin-bottom: 4rem;
+}
+.primary-news-img-desktop{
+    display: none;
+}
+
+.primary-news-title{
+    font-size: xxx-large;
+    color: var(--Very-dark-blue);
+    margin-block: 1rem;
+}
+.primary-news-text p{
+
+    margin-bottom: 2rem;
+}
+.primary-news-text a{
+    display: block;
+    width: fit-content;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--Off-white);
+    background-color: var(--Soft-red);
+    padding: 0.8rem 2rem;
+    transition: 0.3s;    
+}
+.primary-news-text a:hover{
+    background-color: var(--Very-dark-blue);
+}
+.primary-news-aside{
+    background-color: var(--Very-dark-blue);
+    padding: 1.5rem;
+}
+.primary-news-aside h1{
+    font-size: xx-large;
+    font-weight: 700;
+    color: var(--Soft-orange);
+    margin-bottom: 2rem;
+}
+.primary-news-aside-info{
+    padding-block: 2rem;
+    border-bottom: 1px solid var(--Grayish-blue);
+}
+.primary-news-aside-info:first-of-type{
+    padding-block-start: 0;
+}
+.primary-news-aside-info:last-child{
+    padding-block-end: 0;
+    border: none;
+}
+.primary-news-aside-info p{
+    color: var(--Grayish-blue);
+}
+.primary-news-aside-info h3{
+    margin-bottom: 0.5rem;
+}
+.primary-news-aside-info a{
+    text-decoration: none;
+    color: var(--Off-white);
+    transition: 0.3s;    
+}
+.primary-news-aside-info a:hover{
+    color: var(--Soft-orange);
+}
+
+/* secondary-news */
+.secondary-news{
+    margin-block: 4rem;
+}
+.secondary-news-info{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.secondary-news-info-text{
+    display: grid;
+    place-content: space-between;
+}
+.secondary-news-info-text h3{
+    font-size: xx-large;
+    color: var(--Grayish-blue);
+}
+.secondary-news-info-text a{
+    font-size: large;
+    text-decoration: none;
+    color: var(--Very-dark-blue);
+    transition: 0.3s;    
+}
+.secondary-news-info-text a:hover{
+    color: var(--Soft-red);
+}

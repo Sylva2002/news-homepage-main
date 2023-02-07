@@ -1,0 +1,31 @@
+@media (min-width: 768px){
+ .primary-news-img-mobile{
+    display: none;
+ }
+ .primary-news-img-desktop{
+    display: block;
+ }
+ .primary-news-element{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    place-items: center;
+    margin-block: 1.5rem;
+ }
+ .primary-news-title{
+    margin-block: 0;
+ }
+ .secondary-news main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+ }
+ .nav{
+    right: -50vw;
+    width: 50vw;
+ }
+ .nav.active{
+    right: 0;
+    width: 50vw;
+ }
+}
